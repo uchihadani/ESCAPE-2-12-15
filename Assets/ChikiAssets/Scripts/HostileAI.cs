@@ -76,9 +76,21 @@ public class HostileAI : MonoBehaviour
 
     private void DetectPlayer()
     {
+        PlayerState playerState = playerTransform.GetComponent<PlayerState>();
+
+        
+        if (playerState != null && playerState.estaEscondido)
+        {
+            isPlayerVisible = false;
+            isPlayerInRange = false;
+            return;
+        }
+
+        
         isPlayerVisible = Physics.CheckSphere(transform.position, visionRange, playerLayerMask);
         isPlayerInRange = Physics.CheckSphere(transform.position, engagementRange, playerLayerMask);
     }
+
 
 
     private void FireProjectile()
