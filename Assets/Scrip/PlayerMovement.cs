@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
+
     [SerializeField] private float speed = 5f;
     [SerializeField] private float turnSpeed = 180f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
