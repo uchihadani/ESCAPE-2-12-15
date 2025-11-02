@@ -58,4 +58,17 @@ public class Inventory : MonoBehaviour
         ui.RemoveUIItem(inventoryId);
         audioSource.PlayOneShot(dropItemAudio);
     }
+
+    public bool HasItem(string itemId)
+    {
+        foreach (var item in inventory.Values)
+        {
+            if (item.id == itemId)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
