@@ -807,6 +807,10 @@ PrefabInstance:
       propertyPath: autoStart
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3907739078174949279, guid: adcb276803813df46ade4e0681fe55e5, type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4122315345749798147, guid: adcb276803813df46ade4e0681fe55e5, type: 3}
       propertyPath: m_Name
       value: Dropped Item Prefab hammer
