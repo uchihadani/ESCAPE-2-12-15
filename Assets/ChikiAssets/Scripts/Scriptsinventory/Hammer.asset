@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2bec453adaac846b5d8c8117b0da27, type: 3}
+  m_Name: Hammer
+  m_EditorClassIdentifier: 
+  id: HammerV1
+  description: martillo
+  icon: {fileID: 21300000, guid: bf71682d38a99ff49aeebb4c969a247d, type: 3}
+  prefab: {fileID: 4432767549455038904, guid: 6553c908bbbf5314fbf6dcb860e509fc, type: 3}
