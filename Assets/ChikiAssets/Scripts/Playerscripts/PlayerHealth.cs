@@ -17,3 +17,4 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
     }
 }
+    
