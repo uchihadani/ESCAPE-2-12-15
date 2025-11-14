@@ -4,7 +4,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
-
+    [SerializeField] private AudioClip recibirDaño;
 
     void Start()
     {
@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
    public void TakeDamage(int amount)
     {
+        SoundManager.instance.PlaySound(recibirDaño);
         currentHealth -= amount;
     }
 }

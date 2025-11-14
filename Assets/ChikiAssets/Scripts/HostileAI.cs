@@ -32,6 +32,9 @@ public class HostileAI : MonoBehaviour
     [SerializeField] private float visionRange = 20f;
     [SerializeField] private float engagementRange = 10f;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip ataqueTurro;
+    [SerializeField] private AudioClip turroBardeando;
 
     private bool isPlayerVisible;
     private bool isPlayerInRange;
@@ -154,6 +157,7 @@ public class HostileAI : MonoBehaviour
         if (playerTransform != null)
         {
             navAgent.SetDestination(playerTransform.position);
+            SoundManager.instance.PlaySound(turroBardeando);        //esto es para q te bardee cuando te empieza a chasear
         }
     }
 
@@ -171,6 +175,7 @@ public class HostileAI : MonoBehaviour
 
         if (!isOnAttackCooldown)
         {
+            SoundManager.instance.PlaySound(ataqueTurro); //y este es ya para cuando te revolea el piedrazo o te esta pegando
             FireProjectile();
             StartCoroutine(AttackCooldownRoutine());
         }

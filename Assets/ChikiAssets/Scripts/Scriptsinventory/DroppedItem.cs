@@ -14,7 +14,7 @@ public class DroppedItem : MonoBehaviour
 
     private bool playerInside = false;
     private Inventory playerInventory;
-
+    [SerializeField] private AudioClip agarrarObjeto;
     void Start()
     {
         if (autoStart && item != null)
@@ -61,6 +61,7 @@ public class DroppedItem : MonoBehaviour
     {
         if (playerInside && !pickedUp && Input.GetKeyDown(KeyCode.E))
         {
+            SoundManager.instance.PlaySound(agarrarObjeto);
             Pickup();
         }
     }

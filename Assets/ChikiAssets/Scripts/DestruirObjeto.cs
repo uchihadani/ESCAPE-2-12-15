@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class DestruirObjeto : MonoBehaviour, IInteractuable
 {
-    [SerializeField] private string requiredItemId = "Hammer"; 
-
+    [SerializeField] private string requiredItemId = "Hammer";
+    [SerializeField] private AudioClip destruirPared;
     public void Interactuar(GameObject jugador)
     {
 
@@ -14,8 +14,8 @@ public class DestruirObjeto : MonoBehaviour, IInteractuable
             
             if (playerInventory.HasItem(requiredItemId))
             {
-               
-               
+
+                SoundManager.instance.PlaySound(destruirPared);
                 Destroy(gameObject);
             }
           
